@@ -1,0 +1,10 @@
+\\psf\Home\Documents\projects\CmdT\CmdT\CmdT_UnitTests\bin\Debug\CmdT_UnitTests.dll
+\\psf\Home\Documents\projects\CmdT\CmdT\CmdT_UnitTests\bin\Debug\CmdT_UnitTests.pdb
+\\psf\Home\Documents\projects\CmdT\CmdT\CmdT_UnitTests\bin\Debug\CmdT.dll
+\\psf\Home\Documents\projects\CmdT\CmdT\CmdT_UnitTests\bin\Debug\Microsoft.VSSDK.TestHostFramework.dll
+\\psf\Home\Documents\projects\CmdT\CmdT\CmdT_UnitTests\bin\Debug\Microsoft.VSSDK.UnitTestLibrary.dll
+\\psf\Home\Documents\projects\CmdT\CmdT\CmdT_UnitTests\bin\Debug\CmdT.pdb
+\\psf\Home\Documents\projects\CmdT\CmdT\CmdT_UnitTests\bin\Debug\Microsoft.VSSDK.TestHostFramework.pdb
+\\psf\Home\Documents\projects\CmdT\CmdT\CmdT_UnitTests\obj\Debug\CmdT_UnitTests.csprojResolveAssemblyReference.cache
+\\psf\Home\Documents\projects\CmdT\CmdT\CmdT_UnitTests\obj\Debug\CmdT_UnitTests.dll
+\\psf\Home\Documents\projects\CmdT\CmdT\CmdT_UnitTests\obj\Debug\CmdT_UnitTests.pdb

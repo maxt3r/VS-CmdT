@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CmdT", "CmdT\CmdT.csproj", "{A889315D-228D-48CD-A14B-2D449FAE4645}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CmdT_UnitTests", "CmdT\CmdT_UnitTests\CmdT_UnitTests.csproj", "{6E0E3E21-C1B4-45AA-9F0C-40CD66F3EA61}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{90944A7A-AABF-4787-BDB0-FF44BED51F1A}"
+	ProjectSection(SolutionItems) = preProject
+		UnitTests.testsettings = UnitTests.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A889315D-228D-48CD-A14B-2D449FAE4645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A889315D-228D-48CD-A14B-2D449FAE4645}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A889315D-228D-48CD-A14B-2D449FAE4645}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A889315D-228D-48CD-A14B-2D449FAE4645}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E0E3E21-C1B4-45AA-9F0C-40CD66F3EA61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E0E3E21-C1B4-45AA-9F0C-40CD66F3EA61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E0E3E21-C1B4-45AA-9F0C-40CD66F3EA61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E0E3E21-C1B4-45AA-9F0C-40CD66F3EA61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
