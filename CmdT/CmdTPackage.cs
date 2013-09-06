@@ -87,10 +87,6 @@ namespace Jitbit.CmdT
                 CommandID menuCommandID = new CommandID(GuidList.guidCmdTCmdSet, (int)PkgCmdIDList.cmdidCmdT);
                 MenuCommand menuItem = new MenuCommand(MenuItemCallback, menuCommandID );
                 mcs.AddCommand( menuItem );
-                // Create the command for the tool window
-                CommandID toolwndCommandID = new CommandID(GuidList.guidCmdTCmdSet, (int)PkgCmdIDList.cmdidCmdTWindow);
-                MenuCommand menuToolWin = new MenuCommand(ShowToolWindow, toolwndCommandID);
-                mcs.AddCommand( menuToolWin );
             }
         }
         #endregion
@@ -102,13 +98,7 @@ namespace Jitbit.CmdT
         /// </summary>
         private void MenuItemCallback(object sender, EventArgs e)
         {
-			ToolWindowPane window = this.FindToolWindow(typeof(MyToolWindow), 0, true);
-			if ((null == window) || (null == window.Frame))
-			{
-				throw new NotSupportedException();
-			}
-			IVsWindowFrame windowFrame = (IVsWindowFrame)window.Frame;
-			Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(windowFrame.Show());
+			ShowToolWindow(null, null);
         }
 
     }

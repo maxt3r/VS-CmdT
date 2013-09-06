@@ -3,7 +3,6 @@
 \\psf\Home\Documents\projects\CmdT\CmdT\bin\Debug\CmdT.pkgdef
 \\psf\Home\Documents\projects\CmdT\CmdT\bin\Debug\CmdT.vsix
 \\psf\Home\Documents\projects\CmdT\CmdT\bin\Debug\extension.vsixmanifest
-\\psf\Home\Documents\projects\CmdT\CmdT\obj\Debug\CmdT.csprojResolveAssemblyReference.cache
 \\psf\Home\Documents\projects\CmdT\CmdT\obj\Debug\CmdT.csproj.ResolveComReference.cache
 \\psf\Home\Documents\projects\CmdT\CmdT\obj\Debug\MyControl.baml
 \\psf\Home\Documents\projects\CmdT\CmdT\obj\Debug\MyControl.g.cs
@@ -22,3 +21,4 @@
 \\psf\Home\Documents\projects\CmdT\CmdT\obj\Debug\CmdT.pkgdef
 \\psf\Home\Documents\projects\CmdT\CmdT\obj\Debug\CmdT.latest.pkgdef
 \\psf\Home\Documents\projects\CmdT\CmdT\obj\Debug\extension.vsixmanifest
+\\psf\Home\Documents\projects\CmdT\CmdT\obj\Debug\CmdT.csprojResolveAssemblyReference.cache

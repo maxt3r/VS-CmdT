@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Data;
 using System.Windows;
 using System.Runtime.InteropServices;
+using System.Windows.Forms.VisualStyles;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.VisualStudio.Shell;
 
@@ -20,7 +21,7 @@ namespace Jitbit.CmdT
     /// implementation of the IVsUIElementPane interface.
     /// </summary>
     [Guid("86c9d038-84a5-45e3-b78b-8766a46c3dee")]
-    public class MyToolWindow : ToolWindowPane
+	public class MyToolWindow : ToolWindowPane
     {
         /// <summary>
         /// Standard constructor for the tool window.
@@ -41,7 +42,15 @@ namespace Jitbit.CmdT
             // This is the user control hosted by the tool window; Note that, even if this class implements IDisposable,
             // we are not calling Dispose on this object. This is because ToolWindowPane calls Dispose on 
             // the object returned by the Content property.
-            base.Content = new MyControl();
+			var control = new MyControl();
+	        base.Content = control;
+	        control.ReadyToBeClosed += CloseWindow;
         }
+
+	    private void CloseWindow(object sender, EventArgs e)
+	    {
+			IVsWindowFrame windowFrame = (IVsWindowFrame)this.Frame;
+			windowFrame.CloseFrame((uint)__FRAMECLOSE.FRAMECLOSE_NoSave);
+	    }
     }
 }

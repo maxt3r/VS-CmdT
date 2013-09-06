@@ -94,7 +94,12 @@
  
   </Commands>
 
-
+	<KeyBindings>
+		<KeyBinding guid="guidCmdTCmdSet" id="cmdidCmdT"
+		 editor="guidVSStd97"
+		 key1="t" mod1="Alt">
+		</KeyBinding>
+	</KeyBindings>
 
 
 
