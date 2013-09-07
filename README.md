@@ -3,10 +3,10 @@ Cmd + T for Visual Studio
 
 The Command-T extension provides an extremely fast, intuitive mechanism for
 opening files with a minimal number of keystrokes. It's named
-"Command-T" because it is inspired by the "Go to File" window bound to
+"Command-T" because it replicates the "Go to File" window bound to
 Command-T in TextMate.
 		
-<img src="https://dl.dropboxusercontent.com/u/347209/cmdt.png" alt="CmdT for Visual Studio" style="width:300px" />
+![CmdT Visual Studio](https://dl.dropboxusercontent.com/u/347209/cmdt.png)
 
 ## Installation
 Go to `Tools` - `Extensions and upgrades` and search for `Cmd + T`
@@ -27,4 +27,6 @@ There are lots of thing that could be improved. I've made it in two hours and it
 
 **Max Al Farakh from [JitBit](http://www.jitbit.com/)**
 
-[https://twitter.com/maxt3r](https://twitter.com/maxt3r)
+[@maxt3r](https://twitter.com/maxt3r)
+
+Licensed under [the MIT License](http://opensource.org/licenses/MIT)
