@@ -6,7 +6,7 @@ opening files with a minimal number of keystrokes. It's named
 "Command-T" because it is inspired by the "Go to File" window bound to
 Command-T in TextMate.
 		
-![Screenshot](https://www.dropbox.com/s/oq0gyrc65uo3t95/Screenshot%202013-09-07%2012.57.49.png)
+![Screenshot](https://dl.dropboxusercontent.com/u/347209/cmdt.png)
 
 ## Installation
 Go to `Tools` - `Extensions and upgrades` and search for `Cmd + T`
