@@ -10,7 +10,7 @@
              Name="MyToolWindow">
 	<Grid>
 		<StackPanel Orientation="Vertical" Margin="0">
-			<TextBox x:Name="tbSearch" TextChanged="tbSearch_TextChanged" LostKeyboardFocus="TbSearch_OnLostFocus"></TextBox>
+			<TextBox x:Name="tbSearch" TextChanged="tbSearch_TextChanged" LostKeyboardFocus="TbSearch_OnLostFocus" GotKeyboardFocus="TbSearch_OnGotKeyboardFocus"></TextBox>
 			<ListBox x:Name="filesList"> 
 			</ListBox>
 		</StackPanel>

@@ -34,23 +34,6 @@ namespace Jitbit.CmdT
     [Guid(GuidList.guidCmdTPkgString)]
     public sealed class CmdTPackage : Package
     {
-        /// <summary>
-        /// Default constructor of the package.
-        /// Inside this method you can place any initialization code that does not require 
-        /// any Visual Studio service because at this point the package object is created but 
-        /// not sited yet inside Visual Studio environment. The place to do all the other 
-        /// initialization is the Initialize method.
-        /// </summary>
-        public CmdTPackage()
-        {
-            Debug.WriteLine(string.Format(CultureInfo.CurrentCulture, "Entering constructor for: {0}", this.ToString()));
-        }
-
-        /// <summary>
-        /// This function is called when the user clicks the menu item that shows the 
-        /// tool window. See the Initialize method to see how the menu item is associated to 
-        /// this function using the OleMenuCommandService service and the MenuCommand class.
-        /// </summary>
         private void ShowToolWindow(object sender, EventArgs e)
         {
             // Get the instance number 0 of this tool window. This window is single instance so this instance
@@ -69,11 +52,6 @@ namespace Jitbit.CmdT
         /////////////////////////////////////////////////////////////////////////////
         // Overridden Package Implementation
         #region Package Members
-
-        /// <summary>
-        /// Initialization of the package; this method is called right after the package is sited, so this is the place
-        /// where you can put all the initialization code that rely on services provided by VisualStudio.
-        /// </summary>
         protected override void Initialize()
         {
             Debug.WriteLine (string.Format(CultureInfo.CurrentCulture, "Entering Initialize() of: {0}", this.ToString()));
@@ -85,21 +63,10 @@ namespace Jitbit.CmdT
             {
                 // Create the command for the menu item.
                 CommandID menuCommandID = new CommandID(GuidList.guidCmdTCmdSet, (int)PkgCmdIDList.cmdidCmdT);
-                MenuCommand menuItem = new MenuCommand(MenuItemCallback, menuCommandID );
+				MenuCommand menuItem = new MenuCommand(ShowToolWindow, menuCommandID);
                 mcs.AddCommand( menuItem );
             }
         }
         #endregion
-
-        /// <summary>
-        /// This function is the callback used to execute a command when the a menu item is clicked.
-        /// See the Initialize method to see how the menu item is associated to this function using
-        /// the OleMenuCommandService service and the MenuCommand class.
-        /// </summary>
-        private void MenuItemCallback(object sender, EventArgs e)
-        {
-			ShowToolWindow(null, null);
-        }
-
     }
 }

@@ -27,17 +27,27 @@ namespace Jitbit.CmdT
 		public MyControl()
         {
             InitializeComponent();
-	        tbSearch.KeyDown += SerchEnterPressed;
+	        tbSearch.KeyDown += SearchEnterPressed;
 			tbSearch.PreviewKeyUp += ArrowKeysPressed;
-			Utils u = new Utils();
-	        ProjectItems = u.SolutionFiles();
 
+			RenewProjectItems();
         }
 
 		public void TbSearch_OnLostFocus(object sender, RoutedEventArgs e)
 		{
 			Close();
 		}
+
+		public void TbSearch_OnGotKeyboardFocus(object sender, RoutedEventArgs e)
+		{
+			RenewProjectItems();
+		}
+
+	    private void RenewProjectItems()
+	    {
+			Utils u = new Utils();
+			ProjectItems = u.SolutionFiles();
+	    }
 
 	    private void ArrowKeysPressed(object sender, KeyEventArgs e)
 	    {
@@ -57,7 +67,7 @@ namespace Jitbit.CmdT
 	    }
 
 
-	    private void SerchEnterPressed(object sender, KeyEventArgs e)
+	    private void SearchEnterPressed(object sender, KeyEventArgs e)
 	    {
 			if(e.Key == Key.Enter || e.Key == Key.Return)
 				OpenSelectedFile();

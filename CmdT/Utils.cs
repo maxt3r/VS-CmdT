@@ -108,8 +108,7 @@ namespace Jitbit.CmdT
 
 		public static List<ProjectItem> RSearch(string word,IEnumerable<ProjectItem> files, double fuzzyness)
 		{
-			// Tests have prove that the !LINQ-variant is about 3 times
-			// faster!
+			//gets only physical files, not directories.
 			List<ProjectItem> foundFiles =
 				(
 					from s in files
