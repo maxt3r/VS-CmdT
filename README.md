@@ -6,7 +6,7 @@ opening files with a minimal number of keystrokes. It's named
 "Command-T" because it is inspired by the "Go to File" window bound to
 Command-T in TextMate.
 		
-![Screenshot](https://dl.dropboxusercontent.com/u/347209/cmdt.png)
+<img src="https://dl.dropboxusercontent.com/u/347209/cmdt.png" alt="CmdT for Visual Studio" style="width:300px" />
 
 ## Installation
 Go to `Tools` - `Extensions and upgrades` and search for `Cmd + T`
