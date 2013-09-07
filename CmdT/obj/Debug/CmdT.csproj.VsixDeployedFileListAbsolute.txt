@@ -2,3 +2,5 @@ C:\Users\max\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Jitbit\CmdT
 C:\Users\max\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Jitbit\CmdT\1.0\\CmdT.pkgdef
 C:\Users\max\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Jitbit\CmdT\1.0\\extension.vsixmanifest
 C:\Users\max\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Jitbit\CmdT\1.0\\CmdT.pdb
+C:\Users\max\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Jitbit\CmdT\1.0\\command.png
+C:\Users\max\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Jitbit\CmdT\1.0\Resources\\command.png

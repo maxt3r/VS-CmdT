@@ -2,10 +2,14 @@
   <Metadata>
     <Identity Id="a945d6fc-c52d-4cb8-97a8-ae4a75f4012c" Version="1.0" Language="en-US" Publisher="Jitbit" />
     <DisplayName>CmdT</DisplayName>
-    <Description>The Command-T plug-in provides an extremely fast, intuitive mechanism for
-opening files with a minimal number of keystrokes. It's named
-"Command-T" because it is inspired by the "Go to File" window bound to
-Command-T in TextMate.</Description>
+    <Description xml:space="preserve">
+			The Command-T plug-in provides an extremely fast, intuitive mechanism for
+			opening files with a minimal number of keystrokes. It's named
+			"Command-T" because it is inspired by the "Go to File" window bound to
+			Command-T in TextMate.
+		</Description>
+    <Icon>Resources\command.png</Icon>
+    <Tags>navigation</Tags>
   </Metadata>
   <Installation InstalledByMsi="false">
     <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="11.0" />

@@ -63,7 +63,7 @@
 
       <Button guid="guidCmdTCmdSet" id="cmdidCmdT" priority="0x0100" type="Button">
         <Parent guid="guidCmdTCmdSet" id="MyMenuGroup" />
-        <Icon guid="guidImages" id="bmpPic1" />
+        <Icon guid="guidImages" id="bmpPic2" />
         <Strings>
           <ButtonText>Go to file</ButtonText>
         </Strings>

@@ -1,21 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
-  <Metadata>
-    <Identity Id="a945d6fc-c52d-4cb8-97a8-ae4a75f4012c" Version="1.0" Language="en-US" Publisher="Jitbit" />
-    <DisplayName>CmdT</DisplayName>
-    <Description>The Command-T plug-in provides an extremely fast, intuitive mechanism for
-opening files with a minimal number of keystrokes. It's named
-"Command-T" because it is inspired by the "Go to File" window bound to
-Command-T in TextMate.</Description>
-  </Metadata>
-  <Installation InstalledByMsi="false">
-    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="11.0" />
-  </Installation>
-  <Dependencies>
-    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="4.5" />
-    <Dependency Id="Microsoft.VisualStudio.MPF.11.0" DisplayName="Visual Studio MPF 11.0" d:Source="Installed" Version="11.0" />
-  </Dependencies>
-  <Assets>
-    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
-  </Assets>
+	<Metadata>
+		<Identity Id="a945d6fc-c52d-4cb8-97a8-ae4a75f4012c" Version="0.1" Language="en-US" Publisher="Jitbit" />
+		<DisplayName>CmdT</DisplayName>
+		<Description xml:space="preserve">
+			The Command-T plug-in provides an extremely fast, intuitive mechanism for
+			opening files with a minimal number of keystrokes. It's named
+			"Command-T" because it is inspired by the "Go to File" window bound to
+			Command-T in TextMate.
+		</Description>
+		<MoreInfo>https://github.com/maxt3r/VS-CmdT</MoreInfo>
+		<GettingStartedGuide>https://github.com/maxt3r/VS-CmdT</GettingStartedGuide>
+		<Icon>Resources\command.png</Icon>
+		<PreviewImage>Screenshot 2013-09-07 12.57.49.png</PreviewImage>
+		<Tags>navigation</Tags>
+	</Metadata>
+	<Installation InstalledByMsi="false">
+		<InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="11.0" />
+	</Installation>
+	<Dependencies>
+		<Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="4.0" />
+		<Dependency Id="Microsoft.VisualStudio.MPF.11.0" DisplayName="Visual Studio MPF 11.0" d:Source="Installed" Version="11.0" />
+	</Dependencies>
+	<Assets>
+		<Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+	</Assets>
 </PackageManifest>
