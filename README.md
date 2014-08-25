@@ -15,7 +15,7 @@ Go to `Tools` - `Extensions and upgrades` and search for `Cmd + T`
 
 You can launch it by clicking `Go to file` in the `Tools` menu, but the prefered way to do that is by pressing a shortcut. The default shortcut is `Alt + T`, since `Ctrl + t` is used by Visual Studio for some weird command no one have ever used.
 
-You can rebind it by going to `Tools - Options - Environment - Keyboard`.
+You can rebind it by going to `Tools - Options - Environment - Keyboard`. The name of the command to bind is: `Tools.GoToFile`
 
 Once you see the extension window you can start typing. It uses a fuzzy search algorithm, so if you type `mdlusrcs`, it should show `Models\User.cs` file. Press `Enter` to open it and start editing right away.
 
