@@ -109,7 +109,8 @@ namespace Jitbit.CmdT
 			//cleaning up
 			tbSearch.Text = String.Empty;
 			filesList.Items.Clear();
-			currentFiles.Clear();
+			if (currentFiles != null)
+				currentFiles.Clear();
 
 			//hide the window
 			if (ReadyToBeClosed != null)
