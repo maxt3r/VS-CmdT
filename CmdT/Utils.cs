@@ -99,6 +99,9 @@ namespace Jitbit.CmdT
 
 		private static float RankMatch(string needle, string haystack)
 		{
+			// Case insensitive search
+			needle = needle.ToLower();
+			haystack = haystack.ToLower();
 			// Quick scan to make sure this is worth ranking
 			// Also prevents misordered matches from gaining rank
 			if (!LinearMatch(needle, haystack))
@@ -131,7 +134,7 @@ namespace Jitbit.CmdT
 				}
 				// Make sure we've found a & b, and that 'a' comes before 'b'
 				if (first.Count > 0 && second.Count > 0 &&
-					first.Min() < second.Max())
+				    first.Min() < second.Max())
 				{
 					// Find the shortest distance between 'a' & 'b'
 					List<int> distances = new List<int>();
