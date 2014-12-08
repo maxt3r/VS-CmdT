@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using EnvDTE;
@@ -81,21 +80,81 @@ namespace Jitbit.CmdT
 			}
 		}
 
-		private static string Pattern(string src)
+		private static bool LinearMatch(string needle, string haystack)
 		{
-			return ".*" + String.Join(".*", src.ToCharArray());
+			int i = 0;
+			foreach (char c in haystack)
+			{
+				if (c == needle[i])
+				{
+					i++;
+				}
+				if (i >= needle.Length)
+				{
+					return true;
+				}
+			}
+			return false;
 		}
 
-		private static bool RMatch(string src, ProjectItem dest)
+		private static float RankMatch(string needle, string haystack)
 		{
-			try
+			// Quick scan to make sure this is worth ranking
+			// Also prevents misordered matches from gaining rank
+			if (!LinearMatch(needle, haystack))
 			{
-				return Regex.Match(GetRelativePath(dest), Pattern(src), RegexOptions.IgnoreCase | RegexOptions.Compiled).Success;
+				return 0;
 			}
-			catch (Exception e)
+			// Can't calculate rank if search pattern is too short
+			else if (needle.Length <= 1)
 			{
-				return false;
+				// We had a match, so we don't want to be filtered out
+				return 1;
 			}
+			float rank = 0;
+			// Iterate thru search pattern as [a,b],[b,c] for "abc"
+			for (int i = 0; i < needle.Length - 1; i++)
+			{
+				// Find & store all positions for [a,b] matched in haystack
+				List<int> first = new List<int>();
+				List<int> second = new List<int>();
+				for (int j = 0; j < haystack.Length; j++)
+				{
+					if(haystack[j] == needle[i])
+					{
+						first.Add(j);
+					}
+					if (haystack[j] == needle[i+1])
+					{
+						second.Add(j);
+					}
+				}
+				// Make sure we've found a & b, and that 'a' comes before 'b'
+				if (first.Count > 0 && second.Count > 0 &&
+					first.Min() < second.Max())
+				{
+					// Find the shortest distance between 'a' & 'b'
+					List<int> distances = new List<int>();
+					foreach (int dx in first)
+					{
+						foreach (int dy in second)
+						{
+							if (dx < dy)
+							{
+								distances.Add(dy - dx);
+							}
+						}
+					}
+					// Rank by shortest distance
+					// 5 points for consecutive chars, noticably less as distance increases
+					rank += 5.0f / distances.Min();
+				}
+				else
+				{
+					return 0;
+				}
+			}
+			return rank;
 		}
 
 		public static string GetRelativePath(ProjectItem item)
@@ -106,14 +165,15 @@ namespace Jitbit.CmdT
 			return (index < 0) ? filePath : filePath.Remove(index, solutionDir.Length);
 		}
 
-		public static List<ProjectItem> RSearch(string word,IEnumerable<ProjectItem> files, double fuzzyness)
+		public static List<ProjectItem> RSearch(string word, IEnumerable<ProjectItem> files, double fuzzyness)
 		{
 			//gets only physical files, not directories.
 			List<ProjectItem> foundFiles =
 				(
 					from s in files
-					where s.Kind=="{6BB5F8EE-4483-11D3-8BCF-00C04F8EC28C}" && RMatch(word, s) == true 
-					orderby s.Name descending 
+					let rank = (s.Kind == "{6BB5F8EE-4483-11D3-8BCF-00C04F8EC28C}") ? RankMatch(word, GetRelativePath(s)) : 0
+					where rank > 0
+					orderby rank descending
 					select s
 				).Take(7).ToList();
 
