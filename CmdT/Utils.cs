@@ -59,9 +59,25 @@ namespace Jitbit.CmdT
 
 			}
 		}
+
 		public IEnumerable<ProjectItem> Recurse(ProjectItem i)
 		{
 			yield return i;
+			foreach (ProjectItem j in Recurse(i.ProjectItems))
+			{
+				yield return j;
+			}
+			if(i.SubProject != null)
+			{
+				foreach(ProjectItem k in Recurse(i.SubProject))
+				{
+					yield return k;
+				}
+			}
+		}
+
+		public IEnumerable<ProjectItem> Recurse(Project i)
+		{
 			foreach (ProjectItem j in Recurse(i.ProjectItems))
 			{
 				yield return j;
@@ -74,7 +90,7 @@ namespace Jitbit.CmdT
 			Solution2 soln = (Solution2)dte2.Solution;
 			foreach (Project project in soln.Projects)
 			{
-				foreach (ProjectItem item in Recurse(project.ProjectItems))
+				foreach (ProjectItem item in Recurse(project))
 				{
 					yield return item;
 				}
