@@ -1,6 +1,9 @@
 Cmd + T for Visual Studio
 =======
 
+NOTE: This functionality is now built-in in all the recent VS versions. Absolutely no need for this extension anymore.
+=======
+
 The Command-T extension provides an extremely fast, intuitive mechanism for
 opening files with a minimal number of keystrokes. It's named
 "Command-T" because it replicates the "Go to File" window bound to
